@@ -6,3 +6,5 @@ function loadPartial(id, url) {
 }
 
 loadPartial("infoHeader", "partials/infoHeader.html");
+loadPartial("about", "partials/about.html");
+loadPartial("techStack", "partials/techStack.html");

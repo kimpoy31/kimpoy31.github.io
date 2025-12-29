@@ -15,17 +15,20 @@
     <!-- DAISY UI end -->
 
     <!-- IMPORTING OF PARTIALS -->
-    <script src="scripts/loadPartials.js"></script>
+    <script src="scripts/loadPartials.js" defer></script>
     <!-- Icons Here -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="global.css" />
   </head>
   <body>
     <div class="flex justify-center lg:p-8">
-      <div class="max-w-4xl w-full">
+      <div class="max-w-4xl w-full block gap-6 flex flex-col">
         <div id="infoHeader"></div>
+        <div id="about"></div>
+        <div id="techStack"></div>
       </div>
     </div>
   </body>

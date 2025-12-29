@@ -1,0 +1,184 @@
+<div
+  class="card w-full bg-base-100 card-sm hover:shadow border border-base-content/10"
+>
+  <div class="card-body">
+    <div class="flex justify-between">
+      <h2 class="card-title font-bold text-lg">
+        <i class="fa-solid fa-flask"></i> Tech Stack
+      </h2>
+      <button onclick="techStackModal.showModal()">
+        View All <i class="fa-solid fa-chevron-right small-icon"></i>
+      </button>
+    </div>
+    <h2 class="card-title font-bold">Frontend</h2>
+    <div class="flex gap-2 flex-wrap">
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Javascript
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Typescript
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">React</div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Next.Js
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Tanstack Query
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Tailwind CSS
+      </div>
+    </div>
+    <h2 class="card-title font-bold">Backend</h2>
+    <div class="flex flex-wrap gap-2">
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Laravel
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Laravel Sanctum
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Node.js
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        Express.js
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        REST APIs
+      </div>
+      <div class="badge badge-sm text-nowrap border-base-content/10">
+        WebSockets
+      </div>
+    </div>
+
+    <h2 class="card-title font-bold">DevOps & Deployment</h2>
+    <div class="flex flex-wrap gap-2">
+      <div class="badge badge-sm border-base-content/10">Linux</div>
+      <div class="badge badge-sm border-base-content/10">
+        Self-Hosted Server
+      </div>
+      <div class="badge badge-sm border-base-content/10">SSH</div>
+      <div class="badge badge-sm border-base-content/10">Docker</div>
+      <div class="badge badge-sm border-base-content/10">GitHub Deployment</div>
+    </div>
+    <h2 class="card-title font-bold">Developer Tools</h2>
+    <div class="flex flex-wrap gap-2">
+      <div class="badge badge-sm border-base-content/10">Git</div>
+      <div class="badge badge-sm border-base-content/10">GitHub</div>
+      <div class="badge badge-sm border-base-content/10">VS Code</div>
+      <div class="badge badge-sm border-base-content/10">Cursor</div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL BELOW -->
+
+<dialog id="techStackModal" class="modal">
+  <div class="modal-box w-full max-w-4xl flex gap-4 flex-col">
+    <h2 class="card-title font-bold text-lg">
+      <i class="fa-solid fa-flask"></i> Tech Stack
+    </h2>
+    <div>
+      <h2 class="card-title font-bold">Frontend</h2>
+      <div class="flex gap-2 flex-wrap mt-2">
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Javascript
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Typescript
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          React
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Next.Js
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Tanstack Query
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Tailwind CSS
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          SCSS
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Vite
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          ESLint
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Prettier
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="card-title font-bold">Backend</h2>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Laravel
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Laravel Sanctum
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Node.js
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Express.js
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          REST APIs
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">JWT</div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Middleware
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          WebSockets
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          MySQL
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          MongoDB
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Eloquent ORM
+        </div>
+        <div class="badge badge-md text-nowrap border-base-content/10">
+          Redis
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="card-title font-bold">DevOps & Deployment</h2>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <div class="badge badge-md border-base-content/10">Linux</div>
+        <div class="badge badge-md border-base-content/10">
+          Self-Hosted Server
+        </div>
+        <div class="badge badge-md border-base-content/10">SSH</div>
+        <div class="badge badge-md border-base-content/10">Docker</div>
+        <div class="badge badge-md border-base-content/10">
+          GitHub Deployment
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="card-title font-bold">Developer Tools</h2>
+      <div class="flex flex-wrap gap-2 mt-2">
+        <div class="badge badge-md border-base-content/10">Git</div>
+        <div class="badge badge-md border-base-content/10">GitHub</div>
+        <div class="badge badge-md border-base-content/10">VS Code</div>
+        <div class="badge badge-md border-base-content/10">Cursor</div>
+      </div>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
