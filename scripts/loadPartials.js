@@ -9,3 +9,4 @@ loadPartial("infoHeader", "partials/infoHeader.html");
 loadPartial("about", "partials/about.html");
 loadPartial("techStack", "partials/techStack.html");
 loadPartial("experience", "partials/experienceTimeline.html");
+loadPartial("socials", "partials/socials.html");
