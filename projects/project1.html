@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Event Tabulation System</title>
+
+    <!-- DaisyUI + Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Icons Here -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .carousel-thumb {
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+      .carousel-thumb.selected {
+        border-color: #2563eb;
+      }
+    </style>
+  </head>
+
+  <body class="bg-base-100">
+    <main class="max-w-6xl mx-auto px-4 py-8">
+      <a href="../index.html" class="btn btn-ghost mb-6">
+        <i class="fa fa-arrow-left mr-2"></i>
+        Back to Home
+      </a>
+      <!-- Header -->
+      <header class="mb-6">
+        <h1 class="text-3xl font-bold mb-2">
+          Real-Time Event Tabulation System
+        </h1>
+        <p class="text-base-content/70 max-w-3xl">
+          A production-used system for live judged events, providing real-time
+          score aggregation, automated ranking, and instant result generation.
+        </p>
+      </header>
+
+      <!-- Media Section -->
+      <section class="mb-6 max-w-4xl mx-auto">
+        <div
+          id="main-media-display"
+          class="w-full bg-base-200 rounded-xl overflow-hidden aspect-video flex items-center justify-center"
+        ></div>
+
+        <!-- Thumbnails -->
+        <div class="mt-4 overflow-x-auto">
+          <div class="flex gap-3">
+            <img
+              src="../assets/images/project1/thumbnailTalentComp.jpg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg selected"
+              data-type="video"
+              data-src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F5250380388519674%2F&show_text=false&width=560&t=0"
+            />
+            <img
+              src="../assets/images/project1/thumbnailBobords.jpg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="video"
+              data-src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FIbayawBayawanCity%2Fvideos%2F1034022194843911%2F&show_text=false&width=560&t=0"
+            />
+            <img
+              src="../assets/images/project1/openingSalvo.jpg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="image"
+              data-src="../assets/images/project1/openingSalvo.jpg"
+            />
+            <img
+              src="../assets/images/project1/judges.jpg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="image"
+              data-src="../assets/images/project1/judges.jpg"
+            />
+            <img
+              src="../assets/images/project1/popDance.jpg"
+              class="carousel-thumb w-32 h-20 object-cover rounded-lg"
+              data-type="image"
+              data-src="../assets/images/project1/popDance.jpg"
+            />
+          </div>
+        </div>
+        <p class="text-sm text-base-content/60 mt-2">
+          Includes both system screenshots and photos/videos from actual events
+          where the system was used.
+        </p>
+      </section>
+
+      <!-- Description -->
+      <section class="prose max-w-none mb-6">
+        <p>
+          This project is a real-time tabulation system developed to support
+          live judged events organized by the HR department. It supports
+          multiple judges scoring multiple contestants simultaneously, with
+          results computed and displayed instantly.
+        </p>
+        <p>
+          Judges submit scores through a web interface, while an admin dashboard
+          receives live updates via WebSockets. The system supports both
+          point-based and rank-based scoring models to accommodate different
+          competition formats.
+        </p>
+        <p>
+          Built with Laravel, React, and TypeScript, the system enforces
+          role-based access and centralized scoring logic. It is optimized for
+          time-critical event usage, allowing administrators to generate and
+          print final rankings immediately after judging concludes.
+        </p>
+      </section>
+
+      <!-- Github Repository -->
+      <section class="mb-4">
+        <h2 class="text-lg font-bold">Github Repository</h2>
+        <a
+          href="https://github.com/kimpoyyy31/tabulator-system"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://github.com/kimpoyyy31/tabulator-system</a
+        >
+      </section>
+      <!-- Tech Stack -->
+      <section>
+        <h2 class="text-lg font-bold mb-3">Tech Stack</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-outline">Laravel</span>
+          <span class="badge badge-outline">Laravel Breeze</span>
+          <span class="badge badge-outline">React</span>
+          <span class="badge badge-outline">TypeScript</span>
+          <span class="badge badge-outline">WebSockets</span>
+          <span class="badge badge-outline">Tailwind CSS</span>
+          <span class="badge badge-outline">DaisyUI</span>
+          <span class="badge badge-outline">MySQL</span>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+      <div class="text-center">
+        © <span id="current-year"></span> Kim Harold Pinanonang. All rights
+        reserved.
+      </div>
+    </main>
+
+    <script>
+      const thumbs = document.querySelectorAll(".carousel-thumb");
+      const mainDisplay = document.getElementById("main-media-display");
+
+      function showMedia(idx) {
+        thumbs.forEach((t, i) => t.classList.toggle("selected", i === idx));
+        const { type, src } = thumbs[idx].dataset;
+        mainDisplay.innerHTML = "";
+
+        if (type === "video") {
+          const iframe = document.createElement("iframe");
+          iframe.src = src;
+          iframe.className = "w-full h-full";
+          iframe.allow =
+            "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
+          iframe.allowFullscreen = true;
+          iframe.style.border = "none";
+          mainDisplay.appendChild(iframe);
+        } else {
+          const img = document.createElement("img");
+          img.src = src;
+          img.className = "w-full h-full object-contain";
+          mainDisplay.appendChild(img);
+        }
+      }
+
+      thumbs.forEach((t, i) => t.addEventListener("click", () => showMedia(i)));
+      showMedia(0);
+    </script>
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
